@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>🛍️ shopifiVerse</h1>
+      <h1>🛍️ ByteBuy</h1>
       <CategoryFilter
         categories={categories}
         selected={category}
