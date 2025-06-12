@@ -1,6 +1,7 @@
 # 🛍️ ByteBuy-ReactApp
+![Alt text](image-path.jpg)
 
-**shopifiVerse** is a modern React-based product listing web app with dynamic category filtering. Built with functional components and React hooks, this app showcases a clean and responsive interface that simulates an online shopping experience.
+**ByteBuy** is a modern React-based product listing web app with dynamic category filtering. Built with functional components and React hooks, this app showcases a clean and responsive interface that simulates an online shopping experience.
 
 This project was developed as part of a technical assessment for the React Developer position at **Future Code Technology**.
 
