@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import CategoryFilter from "./components/CategoryFilter";
 import ProductDetail from "./components/ProductDetail";
-import "./App.css"; // Assuming you have a CSS file for global styles
+import Checkout from "./components/Checkout";
+import "./App.css";
 import logo from "./assets/logo_bytebuy.png";
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((err) => console.error("Failed to fetch products:", err));
+      .catch((err) => console.error("Failed to fetch products.", err));
   }, []);
 
   const categories = useMemo(() => {
@@ -51,7 +52,9 @@ const App = () => {
             path="/product/:id"
             element={<ProductDetail products={products} />}
           />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
+
         <footer className="footer">
           <p>
             Made with{" "}

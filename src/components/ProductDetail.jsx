@@ -1,9 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./ProductDetail.css";
 
 const ProductDetail = ({ products }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const product = products.find((p) => p.id.toString() === id);
 
   if (!product) return <div className="not-found">Product not found</div>;
@@ -54,6 +56,14 @@ const ProductDetail = ({ products }) => {
             <strong>Rating:</strong> {renderStars(product.rating?.rate)} (
             {product.rating?.count} reviews)
           </p>
+
+          {/* Buy Now Button */}
+          <button
+            className="buy-now-button"
+            onClick={() => navigate("/checkout")}
+          >
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
